@@ -1,6 +1,6 @@
 package labshopmonolith.domain;
 
-import labshopmonolith.MonolithApplication;
+import labshopmonolith.InventoryApplication;
 import javax.persistence.*;
 import java.util.List;
 import lombok.Data;
@@ -33,12 +33,14 @@ public class Inventory  {
     }
 
     public static InventoryRepository repository(){
-        InventoryRepository inventoryRepository = MonolithApplication.applicationContext.getBean(InventoryRepository.class);
+        InventoryRepository inventoryRepository = InventoryApplication.applicationContext.getBean(InventoryRepository.class);
         return inventoryRepository;
     }
 
 
 
+    public void decreaseStock(DecreaseStockCommand decreaseStockCommand){
+    }
 
 
 
